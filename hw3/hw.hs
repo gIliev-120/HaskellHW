@@ -1,10 +1,9 @@
-fizzbuzz :: [Int] -> String
-fizzbuzz (n:xn) 
-fizzbuzz []         = "error"
- | xn `mod` 15  ==0 = "FizzBuzz"
- | xn `mod` 3  ==0  = "Buzz"
- | xn `mod` 5 ==0   = "Fizz"
- | otherwise        = show n
+fizzbuzz :: Int -> String
+fizzbuzz n
+          | n `mod` 15  ==0 = "FizzBuzz"
+          | n `mod` 3  ==0  = "Buzz"
+          | n `mod` 5 ==0   = "Fizz"
+          | otherwise        = show n
 
 main=do
- print(fizzbuzz([1..15]))
+    print( map fizzbuzz [1..60] )
